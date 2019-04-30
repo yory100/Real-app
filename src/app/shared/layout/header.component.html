@@ -2,7 +2,8 @@
   <div class="container">
     <a class="navbar-brand" routerLink="/">conduit</a>
 
-    <ul>
+    <!-- Show this for logged out users -->
+    <ul class="nav navbar-nav pull-xs-right">
 
       <li class="nav-item">
         <a class="nav-link" routerLink="/">
@@ -11,12 +12,13 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">
           Sign in
         </a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" routerLink="/register" routerLinkActive="active">
           Sign up
         </a>
       </li>
