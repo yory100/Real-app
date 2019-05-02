@@ -5,7 +5,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-import { SharedModule, FooterComponent, HeaderComponent } from './shared';
+import {
+  ApiService,
+  UserService,
+  SharedModule,
+  FooterComponent,
+  HeaderComponent
+} from './shared';
 import { AuthModule } from './auth/auth.module';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true })
@@ -24,7 +30,10 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     rootRouting,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
